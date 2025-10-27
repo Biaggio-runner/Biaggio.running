@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biaggio Running </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <menu>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="pogoda.html">Pogoda</a>
+      <a href="trasy.html">Trasy</a>
+      <a href="pliki.html">Pliki</a>
+      <a href="omnie.html">O mnie</a>
+    </nav>
+  </menu>
+
+  <p class="tekst-tlo">
+  Przed treningiem dobrze sprawdzić pogodę w okolicy. Sprawdź warunki w poniższych punktach.
+  </p>
+
+ <!-- // Przeniesć to do style.css  -->
+
+  <div id="map" style="height: 500px; border-radius: 10px; margin: 40px auto; max-width: 800px;"></div> 
+
+</body>
+
+<script>
+  // Utworzenie mapy
+  var map = L.map('map').setView([49.446776, 20.369725], 11); // Grywałd
+
+  // Warstwa z OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // Dodaj punkty (markery)
+  L.marker([49.466517, 20.556251]).addTo(map).bindPopup("Przehyba");
+  L.marker([49.489251, 20.338938]).addTo(map).bindPopup("Lubań");
+  L.marker([49.413823, 20.414188]).addTo(map).bindPopup("Trzy Korony");
+  L.marker([49.418203, 20.229757]).addTo(map).bindPopup("Góra Żar");
+</script>
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/49d3920d41/cerveny-klastor/" data-label_1="CZERWONY KLASZTOR" data-label_2="WEATHER" data-theme="original" >CZERWONY KLASZTOR WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/49d4520d37/grywald/" data-label_1="GRYWAŁD" data-label_2="WEATHER" data-theme="original" >GRYWAŁD WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/49d4920d67/rytro/" data-label_1="RYTRO" data-label_2="WEATHER" data-theme="original" >RYTRO WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/49d4020d24/lapsze-nizne/" data-label_1="ŁAPSZE NIŻNE" data-label_2="WEATHER" data-theme="original" >ŁAPSZE NIŻNE WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/50d0619d94/krakow/" data-label_1="KRAKÓW" data-label_2="WEATHER" data-theme="original" >KRAKÓW WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
